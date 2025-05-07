@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+Description: This file contains HTML for the layout for a matching memory game. 
+There are 3 different layouts for the different states of the game, each part of the 
+"content" class. The possible layouts are "form" for the intro page/user 
+information gathering, "game" where the matching cards and gameplay are 
+displayed, and "help" which displays instructions on how to play the game. 
+-->
+<html>
+
+<head>
+    <title>Memory Match 🃏</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    </link>
+</head>
+
+<body>
+    <div id="form" class="content">
+        <h1>Memory Match 🃏</h1>
+        <h3>Player Details</h3>
+        <div id="names">
+            <div>
+                <input id="firstName" type="text" maxlength="12">
+                <p>First Name</p>
+            </div>
+            <div>
+                <input id="lastName" type="text" maxlength="12">
+                <p>Last Name</p>
+            </div>
+        </div>
+
+        <input id="age" type="number" min="1">
+        <p>Age</p>
+
+        <p></p>
+        <p></p>
+        <h3>Select Theme</h3>
+        <div id="colours">
+            <div>
+                <input id="colour1" type="color">
+                <p>Light Colour</p>
+            </div>
+            <div>
+                <input id="colour2" type="color">
+                <p>Dark Colour</p>
+            </div>
+        </div>
+
+        <input id="startBtn" type="button" value="Start">
+        <p></p>
+        <p id="errorMsg"></p>
+    </div>
+
+    <div id="help" class="content">
+        <h1>Memory Match 🃏</h1>
+        <h3>How to play!</h3>
+        <p>This is a matching game. Click on a card to flip it over and see what value it has. You may flip over two
+            cards at a time to see if they are a match. If they are NOT a match, you will lose 5 points and you may try
+            again. If they ARE a match, you gain 10 points and the cards will remain flipped over. Try to match all the
+            cards using the fewest number of guesses possible!</p>
+        <br />
+        <p>There are two rounds in this game. The first round has 6 cards for you to match. The second round has 8 cards
+            for you to match. Good luck!</p>
+        <input id="returnBtn" type="button" value="Return">
+    </div>
+
+    <div id="game" class="content">
+        <div id="helpDiv"><input id="helpBtn" type="button" value="Help"></div>
+        <p></p>
+        <div id="player-info" class="game-info">
+            <p id="name" class="player-text">Player: x x</p>
+            <p id="displayAge" class="player-text">Age: </p>
+        </div>
+        <br />
+        <div id="stats" class="game-info">
+            <p id="guess">Guesses: 0</p>
+            <p id="score">Score: 0</p>
+        </div>
+        <div id="card-container">
+            <img id="card1" class="card" src="images/cardBack.jpg">
+            <img id="card2" class="card" src="images/cardBack.jpg">
+            <img id="card3" class="card" src="images/cardBack.jpg">
+            <img id="card4" class="card" src="images/cardBack.jpg">
+            <img id="card5" class="card" src="images/cardBack.jpg">
+            <img id="card6" class="card" src="images/cardBack.jpg">
+            <img id="card7" class="card" src="images/cardBack.jpg">
+            <img id="card8" class="card" src="images/cardBack.jpg">
+        </div>
+        <p id="result"></p>
+        <p id="message"></p>
+        <input id="nextRound" type="button" value="Start round 2!">
+        <br />
+        <input id="playAgain" type="button" value="Play again!">
+    </div>
+</body>
+
+</html>
